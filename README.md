@@ -76,7 +76,7 @@ of the dataset. You can learn more about this dataset: https://www.kaggle.com/th
 - This function calculates the predictive score of the model using predicted classes, `y_hat` and ground truth `y`
 - Uses various sklearn metrics such as `f1_score`, `precision_score`, `jaccard_score`.
 
-## Hyperparamters
+## Hyperparameters
 Activation function: `selu`  
 Optimizer: `SGD`   
 learning rate,`α`: `0.01`  
