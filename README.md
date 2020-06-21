@@ -43,7 +43,7 @@ of the dataset. You can learn more about this dataset: https://www.kaggle.com/th
 * [pprint](https://python.readthedocs.io/en/stable/library/pprint.html#module-pprint) - The pprint module provides a capability to “pretty-print” arbitrary Python data structures in a form which can be used as input to the interpreter.
 
 
-## Steps of Appylying the Machine Algorithm
+## Step-By-Step Application of Machine Algorithm
 **Step 1**. Get data using `import_and_clean_data(train_filename, mode='train')` <br/>
  - check if the dataset `has_missing_values(df, colnames)`
  - feature engineering
