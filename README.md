@@ -43,7 +43,7 @@ of the dataset. You can learn more about this dataset: https://www.kaggle.com/th
 * [pprint](https://python.readthedocs.io/en/stable/library/pprint.html#module-pprint) - The pprint module provides a capability to “pretty-print” arbitrary Python data structures in a form which can be used as input to the interpreter.
 
 
-## Step-By-Step Application of Machine Algorithm
+## Step-By-Step Application of Machine Learning Algorithm
 **Step 1**. Get data using `import_and_clean_data(train_filename, mode='train')` <br/>
  - check if the dataset `has_missing_values(df, colnames)`
  - feature engineering
@@ -56,10 +56,10 @@ of the dataset. You can learn more about this dataset: https://www.kaggle.com/th
  - `get_dummies` creates one-hot vectors of the training and test labels. Alternatively, you can use `to_categorical` function
 
 **Step 3**. Create a Sequential Feedforward Neural Network using `get_model` <br/>
- - be careful when designing the model. Here input_size will the number of columns in x_test (one-hot encoded training set). 
+ - be careful when designing the model. Here `input_size` will the number of columns in x_test (one-hot encoded training set). 
  In this case, it is `16`. Similarly, in output layer, i.e. `output_size` will be equal no. of classes. For example, for binary classification it will be `2`.
  It also must have a `softmax` activation function in order to get model predictions in the form of fuzzy class-probablities
- - `compile` the model using loss function, optimizer, and metric: Here, we have chosen `binary_crossentropy` as the loss function since we are performing classification task. Optimiser is `SGD` and metric is `accuracy`
+ - `compile` the model using loss function, optimizer, and metric: Here, we have chosen `binary_crossentropy` as the loss function since we are performing classification task. Optimiser is `SGD` which stands for 'Stochastic Gradient Descent' and metric is `accuracy`
    
 **Step 4**. Fit the data on training set and evaluate the model performance on test_set using `fit_and_evaluate` <br/>
  - `fit` the training data `(x_train, y_train)` in the model using `model.fit` method 
