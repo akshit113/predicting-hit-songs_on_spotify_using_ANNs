@@ -83,13 +83,13 @@ learning rate,`α`: `0.01`
 train-test: `0.8/0.2`  
 batch_size: `700`  
 epochs: `500`  
-loss function: `binary_cross_entropy`
+loss function: `binary_crossentropy`
 
 ## Results
 **Accuracy**: 75.14%  
-**Jaccard Score**: 61.97%
-**F1 Score**: 
-**Precision**: 
+**Jaccard Score**: 61.97%  
+**F1 Score**: 76.52%  
+**Precision**: 71.91%
 
 ## Author
 [Akshit Agarwal](https://github.com/123)
