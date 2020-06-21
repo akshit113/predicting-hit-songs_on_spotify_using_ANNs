@@ -44,35 +44,35 @@ of the dataset. You can learn more about this dataset: https://www.kaggle.com/th
 
 
 ## Steps of Appylying the Machine Algorithm
-Step 1. Get data using `import_and_clean_data(train_filename, mode='train')` <br/>
+**Step 1**. Get data using `import_and_clean_data(train_filename, mode='train')` <br/>
  - check if the dataset `has_missing_values(df, colnames)`
  - feature engineering
  - one-hot encoding using `one_hot_encode`
  - normalize your data using using `normalize_columns`
  - convert data to `NumPy` array
 
-Step 2. `split_dataset` into train-set and test-set <br/>
+**Step 2**. `split_dataset` into train-set and test-set <br/>
  - `train_test_split` splits the data in the ratio of test-size to the total dataset, i.e. test_size = 0.2 implies train_size = 0.8 
  - `get_dummies` creates one-hot vectors of the training and test labels. Alternatively, you can use `to_categorical` function
 
-Step 3. Create a Sequential Feedforward Neural Network using `get_model` <br/>
+**Step 3**. Create a Sequential Feedforward Neural Network using `get_model` <br/>
  - be careful when designing the model. Here input_size will the number of columns in x_test (one-hot encoded training set). 
  In this case, it is `16`. Similarly, in output layer, i.e. `output_size` will be equal no. of classes. For example, for binary classification it will be `2`.
  It also must have a `softmax` activation function in order to get model predictions in the form of fuzzy class-probablities
  - `compile` the model using loss function, optimizer, and metric: Here, we have chosen `binary_crossentropy` as the loss function since we are performing classification task. Optimiser is `SGD` and metric is `accuracy`
    
-Step 4. Fit the data on training set and evaluate the model performance on test_set using `fit_and_evaluate` <br/>
+**Step 4**. Fit the data on training set and evaluate the model performance on test_set using `fit_and_evaluate` <br/>
  - `fit` the training data `(x_train, y_train)` in the model using `model.fit` method 
  - `evaluate` the model performance on test set using `model.evaluate` method.
  - print the `test_acc` and `test_loss`. This provides the model performance on test_data
  
-Step 5. Iteratively tune the model hyperparameters <br/>
+**Step 5**. Iteratively tune the model hyperparameters <br/>
 - Tune the hyperparameters of the network such as learning rate, activation functions, optimizer, depth of the network (number of hidden layers), width of layers (no. of neurons in each layer), DropOut layers, batch size, epochs, L1 or Ll2 regularization. This is basically the part where the magic happens. So, here's your chance to be creative and artistic!
 
-Step 6. `make_predictions` on the test_dataset using `model.predict` method <br/>
+**Step 6**. `make_predictions` on the test_dataset using `model.predict` method <br/>
 - This function will make predictions and convert the output and ground truth (test labels) to 1D numpy array. 
 
-Step 7. Calculate the predictive power of your model in `calc_accuracy_using_metrics` method
+**Step 7**. Calculate the predictive power of your model in `calc_accuracy_using_metrics` method
 - This function calculates the predictive score of the model using predicted classes, `y_hat` and ground truth `y`
 - Uses various sklearn metrics such as `f1_score`, `precision_score`, `jaccard_score`.
 
