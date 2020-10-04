@@ -92,4 +92,4 @@ loss function: `binary_crossentropy`
 **Precision**: 71.91%
 
 ## Author
-[Akshit Agarwal](https://github.com/123)
+[Akshit Agarwal](https://github.com/akshit113)
